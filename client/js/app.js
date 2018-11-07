@@ -3,7 +3,11 @@ angular
   .config([
     "$stateProvider",
     "$urlRouterProvider",
-    function($stateProvider, $urlRouterProvider) {
+    "$locationProvider",
+    function($stateProvider, $urlRouterProvider, $locationProvider) {
+      $locationProvider.html5Mode(true);
+      $locationProvider.hashPrefix("");
+
       $stateProvider
         .state("login", {
           url: "/login",
