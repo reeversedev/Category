@@ -12,7 +12,7 @@
   function logout() {
     return User.logout().$promise;
   }
-  function register() {
+  function register(email, password) {
     return User.create({ email: email, password: password }).$promise;
   }
   function isAuthenticated() {
@@ -21,12 +21,11 @@
   function getCurrentUser() {
     return User.getCurrent();
   }
-  return {
-    authService: authService,
-    login: login,
-    logout: logout,
-    register: register,
-    isAuthenticated: isAuthenticated,
-    getCurrentUser: getCurrentUser
-  };
+  // return {
+  //   login: login,
+  //   register: register,
+  //   isAuthenticated: isAuthenticated,
+  //   getCurrentUser: getCurrentUser,
+  //   logout: logout
+  // };
 })();

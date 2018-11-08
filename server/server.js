@@ -1,9 +1,20 @@
 'use strict';
-
+var path = require('path');
 var loopback = require('loopback');
 var boot = require('loopback-boot');
 
-var app = module.exports = loopback();
+var app = (module.exports = loopback());
+
+var engine = require('consolidate');
+app.use(loopback.static(path.resolve(__dirname, '../client')));
+
+app.set('views', 'client');
+app.engine('html', engine.mustache);
+app.set('view engine', 'html');
+
+app.get('*', (req, res) => {
+  res.render('index');
+});
 
 app.start = function() {
   // start the web server
@@ -24,6 +35,5 @@ boot(app, __dirname, function(err) {
   if (err) throw err;
 
   // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
+  if (require.main === module) app.start();
 });

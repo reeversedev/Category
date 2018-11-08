@@ -1,0 +1,24 @@
+{
+  "ids": {
+    "User": 4,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Category": 1,
+    "Sub-category": 1
+  },
+  "models": {
+    "User": {
+      "1": "{\"username\":\"goodjob\",\"password\":\"$2a$10$HheqAiw/Yh89Q4lPZVlGsOL.JaZD9Pq3YesEyoKosPSC2qybTsS9e\",\"email\":\"goodjob@shoppinpal.com\",\"id\":1}",
+      "2": "{\"username\":\"you_rock\",\"password\":\"$2a$10$mjOfHUdy5WOTs0Y1OaZveO0fn2NR/IzT9iCTrPh5.81lhPI6fKory\",\"email\":\"yourock@shoppinpal.com\",\"id\":2}",
+      "3": "{\"password\":\"$2a$10$9CZS5Ot/ZfV9HWSnu4/XX.jhnIjrGW.d6dTJkTWIIj5sgbIH0DN6S\",\"email\":\"reeversedev@gmail.com\",\"id\":3}"
+    },
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Category": {},
+    "Sub-category": {}
+  }
+}

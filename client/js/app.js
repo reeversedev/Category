@@ -2,9 +2,9 @@ angular
   .module("app", ["lbServices", "ui.router"])
   .config([
     "$stateProvider",
-    "$urlRouterProvider",
     "$locationProvider",
-    function($stateProvider, $urlRouterProvider, $locationProvider) {
+    "$urlRouterProvider",
+    function($stateProvider, $locationProvider, $urlRouterProvider) {
       $locationProvider.html5Mode(true);
       $locationProvider.hashPrefix("");
 
@@ -20,12 +20,11 @@ angular
           controller: "HomeController"
         })
         .state("register", {
-          url: "register",
+          url: "/register",
           templateUrl: "views/register.html",
           controller: "RegisterController"
         });
-
-      $urlRouterProvider.otherwise("login");
+      $urlRouterProvider.otherwise("home");
     }
   ])
   .run([

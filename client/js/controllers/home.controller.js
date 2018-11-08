@@ -8,7 +8,7 @@
       $scope.logout = function() {
         authService.logout().then(
           function(response) {
-            $location.path("/login");
+            $location.path("/");
             console.log(response);
           },
           function(err) {
